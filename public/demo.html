@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garagem Design System - Demo v1.1</title>
+
+    <!-- Importação do Tema (Simulando CDN) -->
+    <link rel="stylesheet" href="garagem-theme.css">
+
+    <style>
+        /* Estilos extras apenas para a demo */
+        .demo-section {
+            border-bottom: 1px solid var(--borda);
+        }
+
+        .demo-label {
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: var(--texto-secundario);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+    </style>
+</head>
+
+<body data-theme="dark">
+
+    <!-- NAVIGATION -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <h2 style="margin:0; color:white;">GARAGEM</h2>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link">Início</a></li>
+                <li><a href="#" class="nav-link">Componentes</a></li>
+                <li><a href="#" class="nav-link">Sobre</a></li>
+            </ul>
+            <button class="botao botao-pequeno">Login</button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero hero-bg-gradiente">
+        <div class="hero-conteudo">
+            <h1 class="hero-titulo">Identidade Visual</h1>
+            <p class="hero-subtitulo">Sistema de design completo e escalável</p>
+            <div class="flex justify-center gap-md">
+                <button class="botao botao-contrario botao-grande">Documentação</button>
+                <button class="botao botao-outline botao-grande"
+                    style="color:white; border-color:white;">GitHub</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <!-- BANNERS -->
+        <section class="secao demo-section">
+            <span class="demo-label">Componente: Banner</span>
+            <div class="banner banner-destaque">
+                <h2>Banner Promocional</h2>
+                <p>Destaque importante para o usuário com gradiente da marca.</p>
+                <button class="botao botao-contrario">Ação Principal</button>
+            </div>
+        </section>
+
+        <!-- GRID & CARDS -->
+        <section class="secao demo-section">
+            <span class="demo-label">Componente: Grid & Cards</span>
+            <h2>Nossos Serviços</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>Design</h3>
+                    <p>Criação de interfaces modernas e responsivas.</p>
+                    <button class="botao botao-outline botao-pequeno">Saiba mais</button>
+                </div>
+                <div class="card card-gradiente">
+                    <h3>Desenvolvimento</h3>
+                    <p>Implementação limpa e performática.</p>
+                    <button class="botao botao-contrario botao-pequeno">Saiba mais</button>
+                </div>
+                <div class="card card-escuro">
+                    <h3>Consultoria</h3>
+                    <p>Análise técnica e estratégica.</p>
+                    <button class="botao botao-outline botao-pequeno">Saiba mais</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TYPOGRAPHY -->
+        <section class="secao demo-section">
+            <span class="demo-label">Tipografia</span>
+            <h1>Título H1</h1>
+            <h2>Título H2</h2>
+            <h3>Título H3</h3>
+            <p>Parágrafo de texto padrão. A identidade visual da Garagem utiliza fontes modernas e legíveis para
+                garantir a melhor experiência de leitura em qualquer dispositivo.</p>
+            <p class="texto-gradiente" style="font-size: 1.5rem; font-weight: bold;">Texto com Gradiente da Marca</p>
+        </section>
+
+        <!-- BUTTONS -->
+        <section class="secao demo-section">
+            <span class="demo-label">Botões</span>
+            <div class="flex flex-wrap gap-md items-center">
+                <button class="botao">Padrão</button>
+                <button class="botao botao-contrario">Contrário</button>
+                <button class="botao botao-outline">Outline</button>
+                <button class="botao botao-preto">Preto</button>
+                <button class="botao botao-pequeno">Pequeno</button>
+                <button class="botao botao-grande">Grande</button>
+            </div>
+        </section>
+
+        <!-- INPUTS -->
+        <section class="secao demo-section">
+            <span class="demo-label">Formulários</span>
+            <div class="grid grid-2">
+                <div>
+                    <label style="display:block; margin-bottom:0.5rem">Nome Completo</label>
+                    <input type="text" placeholder="Digite seu nome">
+                </div>
+                <div>
+                    <label style="display:block; margin-bottom:0.5rem">Email</label>
+                    <input type="email" placeholder="seu@email.com">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-grid">
+                <div class="rodape-coluna">
+                    <h4>Garagem</h4>
+                    <p>Design System v1.1</p>
+                </div>
+                <div class="rodape-coluna">
+                    <h4>Links</h4>
+                    <ul class="rodape-links">
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="rodape-coluna">
+                    <h4>Social</h4>
+                    <ul class="rodape-links">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rodape-copyright">
+                &copy; 2025 Garagem Design System.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

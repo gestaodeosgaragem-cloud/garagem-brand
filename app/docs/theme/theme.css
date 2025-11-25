@@ -1,0 +1,73 @@
+.theme-page {
+    min-height: 100vh;
+    padding-top: 140px;
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: var(--space-16);
+}
+
+.page-subtitle {
+    font-size: var(--text-xl);
+    color: var(--color-white);
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+.section {
+    margin-bottom: var(--space-12);
+}
+
+.section-title {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-6);
+    color: var(--color-white);
+}
+
+/* Code Blocks */
+.code-block {
+    background: #1A1A1A;
+    color: #F8F1FE;
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    overflow-x: auto;
+    margin: var(--space-4) 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+code {
+    background: rgba(217, 48, 48, 0.1);
+    color: var(--color-primary);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+}
+
+/* CTA */
+.cta-card {
+    text-align: center;
+}
+
+/* Helper Classes */
+.mt-4 {
+    margin-top: var(--space-4);
+}
+
+.flex {
+    display: flex;
+}
+
+.gap-4 {
+    gap: var(--space-4);
+}
+
+.justify-center {
+    justify-content: center;
+}

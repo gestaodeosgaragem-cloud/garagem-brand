@@ -1,0 +1,203 @@
+/* GARAGEM DESIGN SYSTEM - Identidade Visual Oficial */
+
+/* Brand Fonts */
+@font-face {
+  font-family: 'Funnel Display';
+  src: url('/assets/fonts/FunnelDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/assets/fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  /* ==================== CORES OFICIAIS GARAGEM ==================== */
+
+  /* Cor Primária - Vermelho Garagem */
+  --color-primary: #D93030;
+  --color-primary-light: #E55555;
+  --color-primary-dark: #B82828;
+  --color-primary-hover: #E03838;
+
+  /* Cor Secundária - Magenta Garagem */
+  --color-secondary: #EA348B;
+  --color-secondary-light: #EE5BA0;
+  --color-secondary-dark: #C92975;
+
+  /* Branco Ambiente - Fundo Garagem */
+  --color-background: #F8F1FE;
+  --color-white: #FFFFFF;
+
+  /* Preto Técnico */
+  --color-black: #212121;
+  --color-gray-900: #2A2A2A;
+  --color-gray-800: #3D3D3D;
+  --color-gray-700: #525252;
+  --color-gray-600: #666666;
+  --color-gray-500: #999999;
+  --color-gray-400: #CCCCCC;
+  --color-gray-300: #E0E0E0;
+  --color-gray-200: #F0F0F0;
+  --color-gray-100: #F8F8F8;
+
+  /* Gradiente Institucional - 45° de Magenta para Vermelho */
+  --gradient-primary: linear-gradient(45deg, #EA348B 0%, #D93030 100%);
+  --gradient-horizontal: linear-gradient(90deg, #EA348B 0%, #D93030 100%);
+  --gradient-vertical: linear-gradient(180deg, #EA348B 0%, #D93030 100%);
+  --gradient-radial: radial-gradient(circle, #EA348B 0%, #D93030 100%);
+
+  /* Cores de Estado */
+  --color-success: #00C48C;
+  --color-warning: #FFA800;
+  --color-error: #D93030;
+  --color-info: #0084F4;
+
+  /* Aliases Semânticos */
+  --bg-primary: var(--color-white);
+  --bg-secondary: var(--color-background);
+  --bg-dark: var(--color-black);
+  --bg-gradient: var(--gradient-primary);
+
+  --text-primary: var(--color-black);
+  --text-secondary: var(--color-gray-600);
+  --text-inverse: var(--color-white);
+  --text-brand: var(--color-primary);
+
+  --border-light: var(--color-gray-300);
+  --border-medium: var(--color-gray-400);
+  --border-dark: var(--color-gray-600);
+
+  /* ==================== TYPOGRAPHY ==================== */
+
+  /* Orbitron - Títulos principais, chamadas, headings */
+  --font-display: 'Orbitron', -apple-system, sans-serif;
+  --font-heading: 'Orbitron', -apple-system, sans-serif;
+
+  /* Funnel Display - Textos de apoio, parágrafos, interface */
+  --font-primary: 'Funnel Display', -apple-system, sans-serif;
+  --font-body: 'Funnel Display', -apple-system, sans-serif;
+
+  --font-mono: 'Courier New', monospace;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-black: 900;
+
+  /* ==================== SPACING ==================== */
+
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* ==================== BORDERS ==================== */
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ==================== SHADOWS ==================== */
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+  /* Brand Shadows */
+  --shadow-brand-sm: 0 2px 8px rgba(217, 48, 48, 0.15);
+  --shadow-brand-md: 0 4px 16px rgba(217, 48, 48, 0.25);
+  --shadow-brand-lg: 0 8px 24px rgba(217, 48, 48, 0.35);
+
+  /* ==================== TRANSITIONS ==================== */
+
+  --transition-fast: all 150ms ease-out;
+  --transition-base: all 200ms ease-in-out;
+  --transition-slow: all 300ms ease-in-out;
+
+  /* ==================== Z-INDEX ==================== */
+
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 500;
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-bg {
+  background: var(--gradient-primary);
+}
+
+.bg-light {
+  background-color: var(--color-background);
+}
+
+.bg-dark {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Typography Utilities */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+body,
+p,
+span,
+div {
+  font-family: var(--font-body);
+}

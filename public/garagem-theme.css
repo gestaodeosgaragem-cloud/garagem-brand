@@ -1,0 +1,718 @@
+/**
+ * GARAGEM DESIGN SYSTEM - Standalone Theme v1.2
+ * 
+ * Importação via CDN:
+ * @import url('https://seu-dominio.com/garagem-theme.css');
+ * 
+ * OU via HTML:
+ * <link rel="stylesheet" href="https://seu-dominio.com/garagem-theme.css">
+ */
+
+/* ==================== BRAND FONTS ==================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'Funnel Display';
+    src: url('https://fonts.cdnfonts.com/s/85487/FunnelDisplay-VariableFont_wght.woff') format('woff');
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+/* ==================== CSS VARIABLES ==================== */
+
+:root {
+    /* Cores Oficiais Garagem */
+    --garagem-vermelho: #D93030;
+    --garagem-magenta: #EA348B;
+    --garagem-branco-ambiente: #F8F1FE;
+    --garagem-preto-tecnico: #212121;
+    --garagem-gradiente: linear-gradient(45deg, #EA348B 0%, #D93030 100%);
+
+    /* Variações */
+    --garagem-vermelho-hover: #E03838;
+    --garagem-vermelho-dark: #B82828;
+
+    /* Tema Claro (padrão) */
+    --bg-principal: #FFFFFF;
+    --bg-secundario: #F8F1FE;
+    --texto-principal: #212121;
+    --texto-secundario: #525252;
+    --texto-invertido: #FFFFFF;
+    --borda: rgba(33, 33, 33, 0.15);
+
+    /* Fontes */
+    --fonte-headings: 'Orbitron', -apple-system, sans-serif;
+    --fonte-corpo: 'Funnel Display', -apple-system, sans-serif;
+
+    /* Espaçamentos */
+    --espacamento-xs: 0.5rem;
+    --espacamento-sm: 1rem;
+    --espacamento-md: 1.5rem;
+    --espacamento-lg: 2rem;
+    --espacamento-xl: 3rem;
+    --espacamento-2xl: 4rem;
+    --espacamento-3xl: 6rem;
+
+    /* Tamanhos de Fonte */
+    --texto-xs: 0.75rem;
+    --texto-sm: 0.875rem;
+    --texto-base: 1rem;
+    --texto-lg: 1.125rem;
+    --texto-xl: 1.25rem;
+    --texto-2xl: 1.5rem;
+    --texto-3xl: 2rem;
+    --texto-4xl: 2.5rem;
+    --texto-5xl: 3rem;
+    --texto-huge: 4rem;
+
+    /* Bordas */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-full: 9999px;
+
+    /* Sombras */
+    --sombra-sm: 0 2px 8px rgba(217, 48, 48, 0.15);
+    --sombra-md: 0 4px 16px rgba(217, 48, 48, 0.25);
+    --sombra-lg: 0 8px 24px rgba(217, 48, 48, 0.35);
+
+    /* Transições */
+    --transicao: all 200ms ease-in-out;
+}
+
+/* Tema Escuro */
+[data-theme="dark"] {
+    --bg-principal: #212121;
+    --bg-secundario: #2A2A2A;
+    --texto-principal: #FFFFFF;
+    --texto-secundario: #CCCCCC;
+    --texto-invertido: #212121;
+    --borda: rgba(255, 255, 255, 0.15);
+}
+
+/* ==================== RESET & BASE ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    background: var(--bg-principal);
+    color: var(--texto-principal);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==================== TIPOGRAFIA ==================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--fonte-headings);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    margin-bottom: var(--espacamento-sm);
+    color: inherit;
+}
+
+h1 {
+    font-size: var(--texto-5xl);
+}
+
+h2 {
+    font-size: var(--texto-4xl);
+}
+
+h3 {
+    font-size: var(--texto-3xl);
+}
+
+h4 {
+    font-size: var(--texto-2xl);
+}
+
+h5 {
+    font-size: var(--texto-xl);
+}
+
+h6 {
+    font-size: var(--texto-lg);
+}
+
+p {
+    margin-bottom: var(--espacamento-sm);
+    color: var(--texto-secundario);
+}
+
+a {
+    color: var(--garagem-vermelho);
+    text-decoration: none;
+    transition: var(--transicao);
+}
+
+a:hover {
+    color: var(--garagem-vermelho-hover);
+}
+
+/* ==================== LAYOUT & GRID ==================== */
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--espacamento-lg);
+}
+
+.secao {
+    padding: var(--espacamento-xl) 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-sm {
+    gap: var(--espacamento-sm);
+}
+
+.gap-md {
+    gap: var(--espacamento-md);
+}
+
+.gap-lg {
+    gap: var(--espacamento-lg);
+}
+
+.grid {
+    display: grid;
+    gap: var(--espacamento-md);
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Compensação para navegação fixa */
+.pt-nav {
+    padding-top: 100px;
+    /* 80px nav + 20px espaço */
+}
+
+@media (max-width: 768px) {
+    .pt-nav {
+        padding-top: 80px;
+        /* 60px nav + 20px espaço */
+    }
+}
+
+/* ==================== HERO SECTION ==================== */
+
+.hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--garagem-preto-tecnico);
+    color: var(--garagem-branco-ambiente);
+    padding: var(--espacamento-2xl) var(--espacamento-lg);
+    overflow: hidden;
+}
+
+.hero-full {
+    min-height: 100vh;
+}
+
+.hero-bg-gradiente {
+    background: var(--garagem-gradiente);
+}
+
+.hero-conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-titulo {
+    font-size: var(--texto-5xl);
+    font-weight: 900;
+    margin-bottom: var(--espacamento-md);
+    line-height: 1.1;
+}
+
+.hero-subtitulo {
+    font-size: var(--texto-xl);
+    opacity: 0.9;
+    margin-bottom: var(--espacamento-lg);
+    font-weight: 400;
+}
+
+/* ==================== BANNERS ==================== */
+
+.banner {
+    padding: var(--espacamento-xl);
+    background: var(--bg-secundario);
+    border-radius: var(--radius-lg);
+    margin: var(--espacamento-lg) 0;
+    text-align: center;
+}
+
+.banner-destaque {
+    background: var(--garagem-gradiente);
+    color: var(--garagem-branco-ambiente);
+}
+
+.banner-destaque h2,
+.banner-destaque p {
+    color: var(--garagem-branco-ambiente);
+}
+
+/* ==================== BOTÕES ==================== */
+
+button,
+.botao {
+    background: var(--garagem-gradiente);
+    color: var(--garagem-branco-ambiente);
+    font-family: var(--fonte-headings);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transicao);
+    box-shadow: var(--sombra-sm);
+    display: inline-block;
+}
+
+button:hover,
+.botao:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-md);
+}
+
+button:active,
+.botao:active {
+    transform: translateY(0);
+}
+
+.botao-contrario {
+    background: var(--garagem-branco-ambiente);
+    color: var(--garagem-vermelho);
+    border: 2px solid var(--garagem-vermelho);
+}
+
+.botao-contrario:hover {
+    background: var(--garagem-vermelho);
+    color: var(--garagem-branco-ambiente);
+}
+
+.botao-outline {
+    background: transparent;
+    color: var(--texto-principal);
+    border: 2px solid var(--garagem-vermelho);
+}
+
+.botao-outline:hover {
+    background: var(--garagem-vermelho);
+    color: var(--garagem-branco-ambiente);
+}
+
+.botao-preto {
+    background: var(--garagem-preto-tecnico);
+    color: var(--garagem-branco-ambiente);
+}
+
+.botao-preto:hover {
+    background: #2A2A2A;
+}
+
+.botao-pequeno {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.botao-grande {
+    padding: 1.25rem 2.5rem;
+}
+
+/* ==================== CARDS ==================== */
+
+.card {
+    background: var(--bg-secundario);
+    border: 2px solid var(--borda);
+    border-radius: var(--radius-lg);
+    padding: var(--espacamento-lg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: var(--transicao);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-clicavel {
+    cursor: pointer;
+}
+
+.card-clicavel:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-gradiente {
+    background: var(--garagem-gradiente);
+    color: var(--garagem-branco-ambiente);
+    border: none;
+}
+
+.card-escuro {
+    background: var(--garagem-preto-tecnico);
+    color: var(--garagem-branco-ambiente);
+    border: none;
+}
+
+/* Correção de Contraste para Cards Escuros/Gradientes */
+.card-gradiente *,
+.card-escuro * {
+    color: inherit;
+}
+
+.card-gradiente p,
+.card-escuro p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.card-gradiente a,
+.card-escuro a {
+    color: var(--garagem-branco-ambiente);
+    text-decoration: underline;
+}
+
+/* ==================== INPUTS ==================== */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--borda);
+    border-radius: var(--radius-md);
+    background: var(--bg-principal);
+    color: var(--texto-principal);
+    transition: var(--transicao);
+    width: 100%;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--garagem-vermelho);
+    box-shadow: 0 0 0 3px rgba(217, 48, 48, 0.1);
+}
+
+/* ==================== FOOTER ==================== */
+
+.rodape {
+    backdrop-filter: blur(8px);
+    background: #000000e3;
+    color: var(--garagem-branco-ambiente);
+    padding: var(--espacamento-md) 0 var(--espacamento-sm);
+    border-top: 2px solid var(--garagem-vermelho);
+    margin-top: auto;
+}
+
+.rodape-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--espacamento-sm);
+    margin-bottom: var(--espacamento-sm);
+}
+
+.rodape-coluna h4 {
+    color: var(--garagem-vermelho);
+    font-size: var(--texto-lg);
+    margin-bottom: var(--espacamento-sm);
+}
+
+.rodape-links {
+    list-style: none;
+    padding: 0;
+}
+
+.rodape-links li {
+    margin-bottom: var(--espacamento-xs);
+}
+
+.rodape-links a {
+    color: var(--garagem-branco-ambiente);
+    opacity: 0.7;
+    text-decoration: none;
+    transition: var(--transicao);
+}
+
+.rodape-links a:hover {
+    color: var(--garagem-vermelho);
+    opacity: 1;
+    padding-left: 5px;
+}
+
+.rodape-copyright {
+    text-align: center;
+    padding-top: var(--espacamento-sm);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: var(--texto-sm);
+    opacity: 0.5;
+}
+
+/* ==================== UTILITÁRIOS ==================== */
+
+.pt-nav {
+    padding-top: 120px !important;
+}
+
+@media (max-width: 768px) {
+    .pt-nav {
+        padding-top: 100px !important;
+    }
+}
+
+.texto-gradiente {
+    background: var(--garagem-gradiente);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.fundo-gradiente {
+    background: var(--garagem-gradiente);
+}
+
+.fundo-claro {
+    background: var(--garagem-branco-ambiente);
+}
+
+.fundo-escuro {
+    background: var(--garagem-preto-tecnico);
+    color: var(--garagem-branco-ambiente);
+}
+
+.centralizado {
+    text-align: center;
+}
+
+.opacity-70 {
+    opacity: 0.7;
+}
+
+.mb-1rem {
+    margin-bottom: 1rem;
+}
+.mb-2rem {
+    margin-bottom: 2rem;
+}
+
+.mb-3rem {
+    margin-bottom: 3rem;
+}
+
+.text-white {
+    color: white !important;
+}
+
+
+/* ==================== LOGO CLASSES ==================== */
+
+/* Logos Gradiente */
+.logo-gradiente-horizontal::before {
+    content: url('/assets/logos/Gradiente - Horizontal Completa.svg');
+    display: block;
+}
+
+.logo-gradiente-vertical::before {
+    content: url('/assets/logos/Gradiente - Vertical Completa.svg');
+    display: block;
+}
+
+.logo-gradiente-vertical-direita::before {
+    content: url('/assets/logos/Gradiente - Vertical Direita.svg');
+    display: block;
+}
+
+.logo-gradiente-vertical-esquerda::before {
+    content: url('/assets/logos/Gradiente - Vertical Esquerda.svg');
+    display: block;
+}
+
+.logo-gradiente-simbolo::before {
+    content: url('/assets/logos/Gradiente - Símbolo.svg');
+    display: block;
+}
+
+/* Logos Preto */
+.logo-preto-horizontal::before {
+    content: url('/assets/logos/Preto - Horizontal Completa.svg');
+    display: block;
+}
+
+.logo-preto-vertical::before {
+    content: url('/assets/logos/Preto - Vertical Completa.svg');
+    display: block;
+}
+
+.logo-preto-vertical-direita::before {
+    content: url('/assets/logos/Preto - Vertical Direita.svg');
+    display: block;
+}
+
+.logo-preto-vertical-esquerda::before {
+    content: url('/assets/logos/Preto - Vertical Esquerda.svg');
+    display: block;
+}
+
+.logo-preto-simbolo::before {
+    content: url('/assets/logos/Preto - Símbolo.svg');
+    display: block;
+}
+
+/* Logos Branco */
+.logo-branco-horizontal::before {
+    content: url('/assets/logos/Branco - Horizontal Completa.svg');
+    display: block;
+}
+
+.logo-branco-vertical::before {
+    content: url('/assets/logos/Branco - Vertical Completa.svg');
+    display: block;
+}
+
+.logo-branco-vertical-direita::before {
+    content: url('/assets/logos/Branco - Vertical Direita.svg');
+    display: block;
+}
+
+.logo-branco-vertical-esquerda::before {
+    content: url('/assets/logos/Branco - Vertical Esquerda.svg');
+    display: block;
+}
+
+.logo-branco-simbolo::before {
+    content: url('/assets/logos/Branco - Símbolo.svg');
+    display: block;
+}
+
+/* Container de logo - define tamanho padrão */
+.logo {
+    display: inline-block;
+    width: 200px;
+    /* Tamanho padrão */
+}
+
+.logo-sm {
+    width: 100px;
+}
+
+.logo-md {
+    width: 200px;
+}
+
+.logo-lg {
+    width: 300px;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    button,
+    .botao {
+        width: 100%;
+    }
+
+    .container {
+        padding: 0 var(--espacamento-sm);
+    }
+
+    .hero-titulo {
+        font-size: 3rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg-principal: #212121;
+        --bg-secundario: #2A2A2A;
+        --texto-principal: #FFFFFF;
+        --texto-secundario: #CCCCCC;
+        --texto-invertido: #212121;
+        --borda: rgba(255, 255, 255, 0.15);
+    }
+}
+
+.mb-2rem { margin-bottom: 2rem; }
+.mb-3rem { margin-bottom: 3rem; }
+.text-white { color: white !important; }

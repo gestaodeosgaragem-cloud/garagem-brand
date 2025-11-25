@@ -1,0 +1,3 @@
+# Deploy Trigger
+
+Arquivo para forçar rebuild no Vercel - $(Get-Date -Format "yyyy-MM-dd HH:mm:ss")
